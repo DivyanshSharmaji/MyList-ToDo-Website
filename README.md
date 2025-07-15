@@ -24,7 +24,7 @@ MyList is a responsive, and animated To-Do List website built with **HTML, CSS, 
 
 ## 🌈 Live Preview
 
-
+https://divyanshsharmaji.github.io/MyList-ToDo-Website/
 
 ---
 
@@ -34,6 +34,7 @@ MyList is a responsive, and animated To-Do List website built with **HTML, CSS, 
 ├── index.html
 ├── style.css
 ├── script.js
+├── favicon.ico
 └── README.md
 
 
@@ -43,7 +44,7 @@ MyList is a responsive, and animated To-Do List website built with **HTML, CSS, 
 
 1. **Download** or **clone** this repository:
    ```bash
-   git clone https://github.com/yourusername/MyList-Todo-App.git
+   git clone https://github.com/DivyanshSharmaji/MyList-ToDo-Website.git
 
 2. Open index.html in any modern browser (Chrome, Firefox, Edge, Safari)
 
