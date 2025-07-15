@@ -31,10 +31,15 @@ https://divyanshsharmaji.github.io/MyList-ToDo-Website/
 ## 📁 Folder Structure
 
 📁 MyList-ToDo-App/
+
 ├── index.html
+
 ├── style.css
+
 ├── script.js
+
 ├── favicon.ico
+
 └── README.md
 
 
