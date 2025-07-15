@@ -1,0 +1,274 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.app-wrapper {
+  background-color: #ffe1ac;;
+  max-width: 95%;
+  height: 95%px;
+  margin: 6%;
+  padding: 7%;
+  padding-top: 2%;
+  border-radius: 20px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+main {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+#task-input-wrapper {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+#task-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+
+#due-date-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#add-task-btn {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#add-task-btn:hover {
+  background-color: #015fc4;
+}
+#task-list {
+  list-style: none;
+  padding: 0;
+}
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  flex-wrap: wrap; 
+}
+
+.task-item span {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  flex: 1;
+}
+
+.task-item button {
+  margin-left: 10px;
+  font-size: 16px;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.complete-btn {
+  background-color: #28a745;
+  color: white;
+}
+.complete-btn:hover {
+    background-color: #00871f;
+}
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+.delete-btn:hover {
+    background-color: #c7071a;
+}
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+/* Filter Buttons */
+#filter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.filter-btn {
+    flex: 1;
+    padding: 8px;
+    margin: 0 5px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.filter-btn:hover {
+  background-color: #5a6268;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #task-input-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #add-task-btn {
+    width: 100%;
+  }
+  .filter-btn {
+    margin: 5px 0;
+  }
+  #filter-wrapper {
+    flex-direction: column;
+  }
+}
+
+
+#theme-toggle {
+  background-color: #ff17f0;
+  margin-left: 10px;
+  font-size: 16px;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Bonus: Dark Theme */
+
+body.dark {
+  background-color: #000000;
+  color: #e0e0e0;
+}
+
+body.dark .app-wrapper {
+  background-color: #882797;;
+  max-width: 95%;
+  height: 95%px;
+  margin: 6%;
+  padding: 7%;
+  padding-top: 2%;
+  border-radius: 20px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+body.dark input,
+body.dark button,
+body.dark .task-item {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border-color: #333;
+}
+
+body.dark #add-task-btn:hover {
+  background-color: #015fc4;
+}
+
+body.dark .completed {
+  color: #888;
+  text-decoration: line-through;
+}
+
+body.dark #add-task-btn {
+  background-color: #0d6efd;
+}
+
+body.dark .complete-btn {
+  background-color: #4caf50;
+}
+
+body.dark .complete-btn:hover {
+    background-color: #00871f;
+}
+
+body.dark .delete-btn {
+  background-color: #c82333;
+}
+
+body.dark .delete-btn:hover {
+    background-color: #93000f;
+}
+
+body.dark .filter-btn {
+  background-color: #444;
+}
+
+body.dark .filter-btn:hover {
+  background-color: #383745;
+}
+
+body.dark #theme-toggle {
+  background-color: #ff17f0;
+  color: #121212;
+}
+
+
+#clear-completed-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff9900;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#clear-completed-btn:hover {
+  background-color: #e68a00;
+}
+
+.task-item small {
+  font-size: 12px;
+  margin-left: 10px;
+  color: #777;
+}
+
+
+/* Animate adding tasks */
+.task-item {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animate removing tasks */
+.fade-out {
+  animation: fadeOut 0.25s ease forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
